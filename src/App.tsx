@@ -30,6 +30,10 @@ export function App() {
     ))
   }
 
+  const deleteTask = (id: number) => {
+    setTasks(tasks.filter((task) => task.id !== id))
+  }
+
   return (
     <div className='flex flex-col items-center justify-center font-inter min-h-screen bg-gray-600'>
       <Header />
