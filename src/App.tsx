@@ -23,6 +23,13 @@ export function App() {
     setTasks([...tasks, newTask])
   } 
 
+  const toggleTask = (id: number) => {
+    setTasks(
+      tasks.map((task) => 
+      task.id === id ? {...task, completed: !task.completed} : task
+    ))
+  }
+
   return (
     <div className='flex flex-col items-center justify-center font-inter min-h-screen bg-gray-600'>
       <Header />
