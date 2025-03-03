@@ -40,9 +40,9 @@ export function App() {
 
       
       <main className='bg-gray-600 min-h-screen flex flex-col items-center gap-16 max-w-3xl w-full'>
-        <AddTask />
+        <AddTask addTask={addTask} />
 
-        <TasksDisplay />
+        <TasksDisplay tasks={tasks} toggleTask={toggleTask} deleteTask={deleteTask} />
       </main>
       
     </div>
