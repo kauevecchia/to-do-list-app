@@ -10,7 +10,7 @@ export function AddTask({ addTask }: AddTaskProps) {
     const [inputError, setInputError] = useState(false)
 
     const handleAddTask = () => {
-        if (taskText.trim()) {
+        if (!taskText.trim()) {
             setInputError(true)
             return
         }
