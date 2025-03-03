@@ -1,8 +1,18 @@
 import { Header } from './components/Header'
 import { AddTask } from './components/AddTask'
 import { TasksDisplay } from './components/TasksDisplay'
+import { useState } from 'react'
+
+interface Task {
+  id: number
+  text: string
+  completed: boolean
+}
 
 export function App() {
+  const [tasks, setTasks] = useState<Task[]>([])
+
+
   return (
     <div className='flex flex-col items-center justify-center font-inter min-h-screen bg-gray-600'>
       <Header />
