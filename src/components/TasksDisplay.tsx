@@ -1,4 +1,13 @@
+import empty from '../assets/empty.svg'
+import checkedIcon from '../assets/checked-default.svg'
+import uncheckedIcon from '../assets/unchecked-default.svg'
+import trashDefault from '../assets/delete-default.svg'
+import trashHover from '../assets/delete-hover.svg'
+import { useState } from 'react'
+
 export function TasksDisplay() {
+    const [hoveredTask, setHoveredTask] = useState<number | null>(null)
+
     return (
         <section className="w-full flex flex-col gap-6">
             <div className="flex items-center justify-between">
