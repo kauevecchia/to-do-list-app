@@ -43,7 +43,36 @@ export function TasksDisplay({ tasks, toggleTask, deleteTask }: TasksDisplayProp
                         </div>
                     </div>
                     :
-                    
+                    tasks.map((task) => (
+                        <div
+                            key={task.id}
+                            className='flex items-center justify-center bg-gray-500 rounded-md w-full p-4 gap-3'
+                        >
+                            <input
+                                type="checkbox"
+                                id={`checkbox-${task.id}`}
+                                onChange={() => toggleTask(task.id)}
+                                className="hidden"
+                            />
+                            <label htmlFor={`checkbox-${task.id}`} className="cursor-pointer">
+                                <img
+                                    src={task.completed ? checkedIcon : uncheckedIcon}
+                                    alt="checkbox"
+                                />
+                            </label>
+                            <span className={`${task.completed ? "line-through text-gray-300" : "text-gray-100"} w-full`}>
+                                {task.text}
+                            </span>
+                            <button
+                                onClick={() => deleteTask(task.id)}
+                                onMouseEnter={() => setHoveredTask(task.id)}
+                                onMouseLeave={() => setHoveredTask(null)}
+                                className='flex items-center justify-center transition duration-400 hover:bg-gray-400 rounded-md w-6 h-6'
+                            >
+                                <img src={hoveredTask === task.id ? trashHover : trashDefault} alt="Delete task" />
+                            </button>
+                        </div>
+                    ))
                 }
             </div>
         </section>
