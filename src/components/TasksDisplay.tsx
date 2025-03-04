@@ -25,7 +25,7 @@ export function TasksDisplay({ tasks, toggleTask, deleteTask }: TasksDisplayProp
             <div className="flex items-center justify-between">
                 <div className="flex gap-2 items-center justify-baseline">
                     <p className="text-blue font-bold">Tarefas criadas</p>
-                    <span className="text-gray-200 font-bold bg-gray-400 rounded-full py-0.5 px-2.5 text-sm">{}</span>
+                    <span className="text-gray-200 font-bold bg-gray-400 rounded-full py-0.5 px-2.5 text-sm">{tasks.length}</span>
                 </div>
                 <div className="flex gap-2 items-center justify-center">
                     <p className="text-purple font-bold">Tarefas concluídas</p>
