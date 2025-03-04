@@ -5,7 +5,19 @@ import trashDefault from '../assets/delete-default.svg'
 import trashHover from '../assets/delete-hover.svg'
 import { useState } from 'react'
 
-export function TasksDisplay() {
+interface Task {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
+interface TasksDisplayProps {
+    tasks: Task[]
+    toggleTask: (id: number) => void
+    deleteTask: (id: number) => void
+}
+
+export function TasksDisplay({ tasks, toggleTask, deleteTask }: TasksDisplayProps) {
     const [hoveredTask, setHoveredTask] = useState<number | null>(null)
 
     return (
