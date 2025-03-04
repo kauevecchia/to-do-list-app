@@ -34,7 +34,17 @@ export function TasksDisplay({ tasks, toggleTask, deleteTask }: TasksDisplayProp
             </div>
 
             <div className="border-t border-gray-400">
-                
+                {tasks.length < 1 ?
+                    <div className='flex flex-col items-center justify-center gap-4 mt-16'>
+                        <img src={empty} alt=""/>
+                        <div>
+                            <p className='text-gray-300 font-bold'>Você ainda não tem tarefas cadastradas</p>
+                            <p className='text-gray-300'>Crie tarefas e organize seus itens a fazer</p>
+                        </div>
+                    </div>
+                    :
+                    
+                }
             </div>
         </section>
     )
