@@ -1,4 +1,4 @@
-import empty from '../assets/empty.svg'
+import emptyState from '../assets/empty-state.svg'
 import checkedIcon from '../assets/checked-default.svg'
 import uncheckedIcon from '../assets/unchecked-default.svg'
 import trashDefault from '../assets/delete-default.svg'
@@ -36,7 +36,7 @@ export function TasksDisplay({ tasks, toggleTask, deleteTask }: TasksDisplayProp
             <div className="border-t border-gray-400">
                 {tasks.length < 1 ?
                     <div className='flex flex-col items-center justify-center gap-4 mt-16'>
-                        <img src={empty} alt=""/>
+                        <img src={emptyState} alt=""/>
                         <div>
                             <p className='text-gray-300 font-bold'>Você ainda não tem tarefas cadastradas</p>
                             <p className='text-gray-300'>Crie tarefas e organize seus itens a fazer</p>
