@@ -33,7 +33,7 @@ export function TasksDisplay({ tasks, toggleTask, deleteTask }: TasksDisplayProp
                 </div>
             </div>
 
-            <div className="border-t border-gray-400">
+            <div className="flex flex-col gap-3 border-t border-gray-400 rounded-t-md">
                 {tasks.length < 1 ?
                     <div className='flex flex-col items-center justify-center gap-4 mt-16'>
                         <img src={emptyState} alt=""/>
